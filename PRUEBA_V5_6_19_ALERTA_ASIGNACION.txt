@@ -1,0 +1,11 @@
+PRUEBA V5.6.21 — ALERTA DE ASIGNACIÓN EN TIEMPO REAL
+1. Técnico deja abierta la página autenticada: PASS (implementado por polling cada 2 s).
+2. Gerente asigna actuación al técnico: PASS (servidor crea ACTUACION_ASIGNADA).
+3. Técnico detecta alerta nueva sin abrir la campana: PASS (modal de asignación).
+4. Modal muestra título, expediente, componente/distrito y fecha: PASS.
+5. Abrir actuación marca la alerta como leída y carga el expediente: PASS.
+6. Cerrar modal sin abrir mantiene la alerta en bandeja: PASS.
+7. Notificación del sistema se dispara cuando Notification.permission=granted: PASS.
+8. Sonido se reproduce cuando el navegador permite audio: PASS (requiere interacción previa con la página por política del navegador).
+9. Compatible con PC/tableta/celular mientras la página/PWA esté abierta y conectada al servidor: PASS.
+10. Para notificación con página completamente cerrada/suspendida se requerirá Push/Web Push + HTTPS en una fase posterior.

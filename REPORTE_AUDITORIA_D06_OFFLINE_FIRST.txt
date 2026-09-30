@@ -1,0 +1,22 @@
+PASS | Python syntax
+PASS | Sistema1 JavaScript syntax
+PASS | Sistema2 JavaScript syntax
+PASS | offline-core JavaScript syntax
+PASS | Service Worker syntax
+PASS | IndexedDB stores
+PASS | Offline save
+PASS | Offline photos as Blob
+PASS | Offline GPS queue
+PASS | Sync queue states
+PASS | Offline reception for new field records
+PASS | Save deduplication
+PASS | Offline session cache
+PASS | Service Worker shell cache
+PASS | Service Worker excludes API
+PASS | PWA manifest standalone
+PASS | HTTPS server support
+PASS | Offline assets public
+PASS | HTTP mobile warning
+PASS | D01-D05 state machine retained
+PASS | Database remains clean for test package | {'expedientes': 0, 'personal': 1, 'usuarios': 3, 'notificaciones': 0, 'asignaciones': 0}
+RESULTADO 21/21 PASS

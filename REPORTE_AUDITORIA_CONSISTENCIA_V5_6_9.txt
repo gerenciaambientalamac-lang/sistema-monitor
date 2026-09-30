@@ -1,0 +1,45 @@
+AUDITORÍA V5.6.9 — CONSISTENCIA DE COMPONENTES
+Resultado: 42/42 PASS
+
+PASS | Python syntax
+PASS | 01_SISTEMA_INSPECCIONES JavaScript syntax
+PASS | 02_MOTOR_SEGUIMIENTO JavaScript syntax
+PASS | Gerente login
+PASS | Técnico login
+PASS | Asignación conserva OI | OI
+PASS | Técnico recibe OI + códigos derivados | tipo=OI acta=ACTA-OI-2026-0001 informe=INF-OI-2026-0001
+PASS | Asignación conserva RS | RS
+PASS | Técnico recibe RS + códigos derivados | tipo=RS acta=ACTA-RS-2026-0002 informe=INF-RS-2026-0002
+PASS | Asignación conserva VH | VH
+PASS | Técnico recibe VH + códigos derivados | tipo=VH acta=ACTA-VH-2026-0003 informe=INF-VH-2026-0003
+PASS | Asignación conserva RH | RH
+PASS | Técnico recibe RH + códigos derivados | tipo=RH acta=ACTA-RH-2026-0004 informe=INF-RH-2026-0004
+PASS | Asignación conserva AU | AU
+PASS | Técnico recibe AU + códigos derivados | tipo=AU acta=ACTA-AU-2026-0005 informe=INF-AU-2026-0005
+PASS | Asignación conserva TP | TP
+PASS | Técnico recibe TP + códigos derivados | tipo=TP acta=ACTA-TP-2026-0006 informe=INF-TP-2026-0006
+PASS | Asignación conserva CO | CO
+PASS | Técnico recibe CO + códigos derivados | tipo=CO acta=ACTA-CO-2026-0007 informe=INF-CO-2026-0007
+PASS | Asignación conserva CR | CR
+PASS | Técnico recibe CR + códigos derivados | tipo=CR acta=ACTA-CR-2026-0008 informe=INF-CR-2026-0008
+PASS | Asignación conserva CS | CS
+PASS | Técnico recibe CS + códigos derivados | tipo=CS acta=ACTA-CS-2026-0009 informe=INF-CS-2026-0009
+PASS | Asignación conserva EP | EP
+PASS | Técnico recibe EP + códigos derivados | tipo=EP acta=ACTA-EP-2026-0010 informe=INF-EP-2026-0010
+PASS | Asignación conserva ZR | ZR
+PASS | Técnico recibe ZR + códigos derivados | tipo=ZR acta=ACTA-ZR-2026-0011 informe=INF-ZR-2026-0011
+PASS | Asignación conserva MT | MT
+PASS | Técnico recibe MT + códigos derivados | tipo=MT acta=ACTA-MT-2026-0012 informe=INF-MT-2026-0012
+PASS | Asignación conserva GR | GR
+PASS | Técnico recibe GR + códigos derivados | tipo=GR acta=ACTA-GR-2026-0013 informe=INF-GR-2026-0013
+PASS | Servidor rechaza TP→RS | status=400 error=El componente ambiental no coincide con el registrado en la recepción: TP.
+PASS | Guardado TP coherente | {'ok': True, 'id': 14, 'version': 3, 'status': 'BORRADOR', 'codigo': 'AMB-LLE-2026-0014'}
+PASS | Persistencia mantiene TP | ('TP', 'INF-TP-2026-0014')
+PASS | Servidor rechaza cambio de origen | {'ok': False, 'error': 'El origen no coincide con el registrado en la recepción: Solicitud de inspección.'}
+PASS | Componente técnico es solo lectura
+PASS | Acta muestra componente en solo lectura
+PASS | Informe muestra tipo en solo lectura
+PASS | Recepción exige componente
+PASS | MT incluido en informe
+PASS | Scope no ofrece origen para corrección
+PASS | Scope no ofrece técnico responsable para corrección

@@ -1,0 +1,18 @@
+PASS | 01_SISTEMA_INSPECCIONES/index.html toast element
+PASS | 01_SISTEMA_INSPECCIONES/index.html close panel function
+PASS | 01_SISTEMA_INSPECCIONES/index.html open alert closes panel
+PASS | 01_SISTEMA_INSPECCIONES/index.html outside click closes
+PASS | 01_SISTEMA_INSPECCIONES/index.html polling detects new alerts
+PASS | 01_SISTEMA_INSPECCIONES/index.html toast on new alert
+PASS | 01_SISTEMA_INSPECCIONES/index.html sound function
+PASS | 01_SISTEMA_INSPECCIONES/index.html notification permission button
+PASS | 02_MOTOR_SEGUIMIENTO/index.html toast element
+PASS | 02_MOTOR_SEGUIMIENTO/index.html close panel function
+PASS | 02_MOTOR_SEGUIMIENTO/index.html open alert closes panel
+PASS | 02_MOTOR_SEGUIMIENTO/index.html outside click closes
+PASS | 02_MOTOR_SEGUIMIENTO/index.html polling detects new alerts
+PASS | 02_MOTOR_SEGUIMIENTO/index.html toast on new alert
+PASS | 02_MOTOR_SEGUIMIENTO/index.html sound function
+PASS | 02_MOTOR_SEGUIMIENTO/index.html notification permission button
+
+TOTAL: 16/16 PASS

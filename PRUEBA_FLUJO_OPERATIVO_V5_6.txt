@@ -1,0 +1,12 @@
+PRUEBA FUNCIONAL V5.6 — FLUJO OPERATIVO
+
+PASS 1: Recepción crea código AMB-LLE-AAAA-NNNN inmediatamente.
+PASS 2: Recepción inicia en RECIBIDO_PENDIENTE_ASIGNACION.
+PASS 3: Gerente asigna solo a técnico activo.
+PASS 4: Asignación registra técnico, gerente, fecha/hora y observación.
+PASS 5: Técnico visualiza actuación asignada.
+PASS 6: Primer guardado técnico cambia ASIGNADO_A_INSPECCION a BORRADOR.
+PASS 7: Código permanece inmutable durante el cambio de estado.
+PASS 8: Técnico no puede crear actuación técnica sin recepción/asignación previa.
+PASS 9: Solo Gerente puede asignar.
+PASS 10: Distrito de actuación se conserva separado del técnico.

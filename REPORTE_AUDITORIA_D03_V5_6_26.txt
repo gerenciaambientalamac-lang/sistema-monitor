@@ -1,0 +1,38 @@
+AUDITORÍA D03 V5.6.26 — PARTICIPANTES E INTEGRIDAD DE ASIGNACIÓN
+Resultado: 35/35 PASS
+
+PASS | Python syntax
+PASS | 01_SISTEMA_INSPECCIONES JavaScript syntax
+PASS | 02_MOTOR_SEGUIMIENTO JavaScript syntax
+PASS | Historical inactive participant rule present
+PASS | Assignment remains Gerente-only
+PASS | Technical module keeps source district immutable
+PASS | Health V5.6.26 | {'ok': True, 'version': 'V5.6.26', 'database': 'SQLite', 'auth': 'enabled'}
+PASS | Gerente login
+PASS | Técnico login
+PASS | Gerente initial password change
+PASS | Técnico initial password change
+PASS | Alta D03 Participante Activo | {'ok': True}
+PASS | Alta D03 Participante Dos | {'ok': True}
+PASS | Personnel catalog contains D03 participants
+PASS | Reception created pending assignment
+PASS | Gerente assigns active technician
+PASS | Assignment history persisted
+PASS | Technician receives assignment notification
+PASS | Technician sees assigned case
+PASS | Technical save with active participant
+PASS | Participant persisted in expediente
+PASS | Participant deactivated by Gerente
+PASS | Historical inactive participant can remain on edit | {'ok': True, 'id': 1, 'version': 4, 'status': 'BORRADOR', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Historical inactive participant remains persisted
+PASS | Second reception created
+PASS | Second case assigned
+PASS | Inactive participant rejected when newly introduced | {'ok': False, 'error': 'El técnico participante está inactivo para nuevas actuaciones: D03 Participante Activo'}
+PASS | Technician cannot assign cases | {'ok': False, 'error': 'Solo el Gerente Ambiental puede asignar actuaciones a técnicos.'}
+PASS | District mutation rejected
+PASS | Origin mutation rejected
+PASS | Component mutation rejected
+PASS | Technical finalization reaches review state
+PASS | Payload status synchronized with server status
+PASS | Gerente can validate finalized report
+PASS | Technician cannot validate

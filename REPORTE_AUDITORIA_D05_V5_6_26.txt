@@ -1,0 +1,48 @@
+AUDITORÍA D05 V5.6.26 — MÁQUINA DE ESTADOS E INTEGRIDAD DE TRANSICIONES
+Resultado: 45/45 PASS
+
+PASS | Python syntax
+PASS | 01_SISTEMA_INSPECCIONES JavaScript syntax
+PASS | 02_MOTOR_SEGUIMIENTO JavaScript syntax
+PASS | D01-D04 server controls retained
+PASS | Server declares complete state catalog
+PASS | Server ignores client status/actor
+PASS | Review only accepts pending review
+PASS | Remission requires validation
+PASS | Closure requires validation
+PASS | Technical editing blocked after review
+PASS | Dashboard exposes state progression
+PASS | Health V5.6.26 | {'ok': True, 'version': 'V5.6.26', 'database': 'SQLite', 'auth': 'enabled'}
+PASS | Gerente login
+PASS | Técnico login
+PASS | Reception creates pending state
+PASS | Assignment reaches assigned state
+PASS | Técnico no puede revisar | {'ok': False, 'error': 'Solo Gerente Ambiental o Administrador puede revisar expedientes.'}
+PASS | Técnico no puede devolver | {'ok': False, 'error': 'Solo Gerente Ambiental o Administrador puede revisar expedientes.'}
+PASS | Técnico no puede remitir | {'ok': False, 'error': 'Solo Gerente Ambiental o Administrador puede remitir expedientes.'}
+PASS | Técnico no puede cerrar | {'ok': False, 'error': 'Solo Gerente Ambiental o Administrador puede finalizar expedientes.'}
+PASS | Technical save reaches BORRADOR | {'ok': True, 'id': 1, 'version': 3, 'status': 'BORRADOR', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Client status tamper ignored: VB_APROBADO | {'ok': True, 'id': 1, 'version': 4, 'status': 'BORRADOR', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Client status tamper ignored: REMITIDO | {'ok': True, 'id': 1, 'version': 5, 'status': 'BORRADOR', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Client status tamper ignored: FINALIZADO | {'ok': True, 'id': 1, 'version': 6, 'status': 'BORRADOR', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Client status tamper ignored: INFORME_FINALIZADO_PENDIENTE_VB | {'ok': True, 'id': 1, 'version': 7, 'status': 'BORRADOR', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Finalize reaches review state | {'ok': True, 'id': 1, 'version': 8, 'status': 'INFORME_FINALIZADO_PENDIENTE_VB', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Technical edit blocked in review state | {'ok': False, 'error': 'El expediente está bloqueado para edición en su estado actual.'}
+PASS | Technical re-finalize blocked in review state | {'ok': False, 'error': 'El expediente está bloqueado para edición en su estado actual.'}
+PASS | Manager return reaches DEVUELTO | {'ok': True, 'expediente': {'codigo': 'AMB-LLE-2026-0001', 'tipo': 'TP', 'origen': 'Solicitud de inspección', 'distrito': 'Zaragoza', 'tipo_actuacion': 'Verificación', 'modalidad_inspeccion': 'CONJUNTA_TAD', 'tecnico_responsable': 'Técnico Ambiental Distrital de Prueba', 'acta_objeto': 'Objeto D05', 'facts': [{'hecho': 'Hecho D05'}], 'analisis': 'Análisis D05', 'conclusions': [{'text': 'Conclusión D05'}], 'recommendations': [{'text': 'Recomendación D05'}], 'acta_tipo_actuacion': 'Verificación', 'materia_principal': 'TP', 'materias_adicionales': [], 'materias': ['TP'], 'acta_schema_version': 'V5.5.1-MAESTRO-1', 'codigo_acta': 'ACTA-TP-2026-0001', 'codigo_informe': 'INF-TP-2026-0001', 'status': 'DEVUELTO', 'tecnicos_participantes': [], '_correction_scope': ['acta_objeto'], 'history': [{'action': 'DEVUELTO CON OBSERVACIONES', 'date': '2026-09-25T21:53:17', 'user': 'gerente', 'obs': 'Corregir objeto', 'documento': '', 'seccion': '', 'correccion_requerida': 'Corregir objeto', 'scope': ['acta_objeto']}]}}
+PASS | Authorized correction save remains DEVUELTO | {'ok': True, 'id': 1, 'version': 10, 'status': 'DEVUELTO', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Re-finalization returns to review | {'ok': True, 'id': 1, 'version': 11, 'status': 'INFORME_FINALIZADO_PENDIENTE_VB', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Manager validation reaches VB_APROBADO | {'ok': True, 'expediente': {'codigo': 'AMB-LLE-2026-0001', 'tipo': 'TP', 'origen': 'Solicitud de inspección', 'distrito': 'Zaragoza', 'tipo_actuacion': 'Verificación', 'modalidad_inspeccion': 'CONJUNTA_TAD', 'tecnico_responsable': 'Técnico Ambiental Distrital de Prueba', 'acta_objeto': 'Objeto corregido D05', 'facts': [{'hecho': 'Hecho D05'}], 'analisis': 'Análisis D05', 'conclusions': [{'text': 'Conclusión D05'}], 'recommendations': [{'text': 'Recomendación D05'}], 'acta_tipo_actuacion': 'Verificación', 'materia_principal': 'TP', 'materias_adicionales': [], 'materias': ['TP'], 'acta_schema_version': 'V5.5.1-MAESTRO-1', 'codigo_acta': 'ACTA-TP-2026-0001', 'codigo_informe': 'INF-TP-2026-0001', 'history': [{'action': 'DEVUELTO CON OBSERVACIONES', 'date': '2026-09-25T21:53:17', 'user': 'gerente', 'obs': 'Corregir objeto', 'documento': '', 'seccion': '', 'correccion_requerida': 'Corregir objeto', 'scope': ['acta_objeto']}, {'action': 'VALIDACIÓN INSTITUCIONAL APROBADA', 'date': '2026-09-25T21:53:18', 'user': 'gerente', 'obs': 'Validado D05'}], 'status': 'VB_APROBADO', 'tecnicos_participantes': []}}
+PASS | Repeated validation rejected | {'ok': False, 'error': 'Solo pueden revisarse expedientes enviados a seguimiento.'}
+PASS | Return after validation rejected | {'ok': False, 'error': 'Solo pueden revisarse expedientes enviados a seguimiento.'}
+PASS | Validated case can be remitted | {'ok': True, 'expediente': {'codigo': 'AMB-LLE-2026-0001', 'tipo': 'TP', 'origen': 'Solicitud de inspección', 'distrito': 'Zaragoza', 'tipo_actuacion': 'Verificación', 'modalidad_inspeccion': 'CONJUNTA_TAD', 'tecnico_responsable': 'Técnico Ambiental Distrital de Prueba', 'acta_objeto': 'Objeto corregido D05', 'facts': [{'hecho': 'Hecho D05'}], 'analisis': 'Análisis D05', 'conclusions': [{'text': 'Conclusión D05'}], 'recommendations': [{'text': 'Recomendación D05'}], 'acta_tipo_actuacion': 'Verificación', 'materia_principal': 'TP', 'materias_adicionales': [], 'materias': ['TP'], 'acta_schema_version': 'V5.5.1-MAESTRO-1', 'codigo_acta': 'ACTA-TP-2026-0001', 'codigo_informe': 'INF-TP-2026-0001', 'history': [{'action': 'DEVUELTO CON OBSERVACIONES', 'date': '2026-09-25T21:53:17', 'user': 'gerente', 'obs': 'Corregir objeto', 'documento': '', 'seccion': '', 'correccion_requerida': 'Corregir objeto', 'scope': ['acta_objeto']}, {'action': 'VALIDACIÓN INSTITUCIONAL APROBADA', 'date': '2026-09-25T21:53:18', 'user': 'gerente', 'obs': 'Validado D05'}, {'action': 'EXPEDIENTE REMITIDO', 'date': '2026-09-25T21:53:19', 'user': 'gerente', 'obs': 'Remisión D05', 'destino': 'Institución D05'}], 'status': 'REMITIDO', 'tecnicos_participantes': [], 'remision': {'destino': 'Institución D05', 'motivo': 'Remisión D05', 'docs': '', 'date': '2026-09-25T21:53:19', 'remitido_por': 'gerente'}}}
+PASS | Repeated remission rejected | {'ok': False, 'error': 'La remisión requiere validación institucional previa.'}
+PASS | Review after remission rejected | {'ok': False, 'error': 'Solo pueden revisarse expedientes enviados a seguimiento.'}
+PASS | Remitted case can close | {'ok': True, 'expediente': {'codigo': 'AMB-LLE-2026-0001', 'tipo': 'TP', 'origen': 'Solicitud de inspección', 'distrito': 'Zaragoza', 'tipo_actuacion': 'Verificación', 'modalidad_inspeccion': 'CONJUNTA_TAD', 'tecnico_responsable': 'Técnico Ambiental Distrital de Prueba', 'acta_objeto': 'Objeto corregido D05', 'facts': [{'hecho': 'Hecho D05'}], 'analisis': 'Análisis D05', 'conclusions': [{'text': 'Conclusión D05'}], 'recommendations': [{'text': 'Recomendación D05'}], 'acta_tipo_actuacion': 'Verificación', 'materia_principal': 'TP', 'materias_adicionales': [], 'materias': ['TP'], 'acta_schema_version': 'V5.5.1-MAESTRO-1', 'codigo_acta': 'ACTA-TP-2026-0001', 'codigo_informe': 'INF-TP-2026-0001', 'history': [{'action': 'DEVUELTO CON OBSERVACIONES', 'date': '2026-09-25T21:53:17', 'user': 'gerente', 'obs': 'Corregir objeto', 'documento': '', 'seccion': '', 'correccion_requerida': 'Corregir objeto', 'scope': ['acta_objeto']}, {'action': 'VALIDACIÓN INSTITUCIONAL APROBADA', 'date': '2026-09-25T21:53:18', 'user': 'gerente', 'obs': 'Validado D05'}, {'action': 'EXPEDIENTE REMITIDO', 'date': '2026-09-25T21:53:19', 'user': 'gerente', 'obs': 'Remisión D05', 'destino': 'Institución D05'}, {'action': 'EXPEDIENTE FINALIZADO', 'date': '2026-09-25T21:53:20', 'user': 'gerente', 'obs': 'Cierre D05'}], 'status': 'FINALIZADO', 'tecnicos_participantes': [], 'remision': {'destino': 'Institución D05', 'motivo': 'Remisión D05', 'docs': '', 'date': '2026-09-25T21:53:19', 'remitido_por': 'gerente'}, 'cierre': {'fecha': '2026-09-25T21:53:20', 'usuario': 'gerente', 'motivo': 'Cierre D05'}}}
+PASS | Review after close | {'ok': False, 'error': 'Solo pueden revisarse expedientes enviados a seguimiento.'}
+PASS | Remit after close | {'ok': False, 'error': 'La remisión requiere validación institucional previa.'}
+PASS | Close twice | {'ok': False, 'error': 'El cierre requiere una validación institucional previa.'}
+PASS | Technical edit after close rejected | {'ok': False, 'error': 'El expediente está bloqueado para edición en su estado actual.'}
+PASS | Final DB status and payload synchronized
+PASS | Version numbers strictly monotonic | [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+PASS | Version payload states match version rows | [('RECIBIDO_PENDIENTE_ASIGNACION', 'RECIBIDO_PENDIENTE_ASIGNACION'), ('ASIGNADO_A_INSPECCION', 'ASIGNADO_A_INSPECCION'), ('BORRADOR', 'BORRADOR'), ('BORRADOR', 'BORRADOR'), ('BORRADOR', 'BORRADOR'), ('BORRADOR', 'BORRADOR'), ('BORRADOR', 'BORRADOR'), ('INFORME_FINALIZADO_PENDIENTE_VB', 'INFORME_FINALIZADO_PENDIENTE_VB'), ('DEVUELTO', 'DEVUELTO'), ('DEVUELTO', 'DEVUELTO'), ('INFORME_FINALIZADO_PENDIENTE_VB', 'INFORME_FINALIZADO_PENDIENTE_VB'), ('VB_APROBADO', 'VB_APROBADO'), ('REMITIDO', 'REMITIDO'), ('FINALIZADO', 'FINALIZADO')]

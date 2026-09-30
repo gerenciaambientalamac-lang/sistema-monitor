@@ -1,0 +1,5 @@
+# Core HTTPS certificate generation
+cryptography>=45,<51
+
+# PDF generation used by the technical-document route
+weasyprint>=63,<70

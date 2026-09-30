@@ -1,0 +1,28 @@
+PASS | Python syntax
+PASS | offline-core syntax
+PASS | Service Worker syntax
+PASS | Sistema1 JS syntax
+PASS | Sistema2 JS syntax
+PASS | R1 IndexedDB version
+PASS | Required local stores
+PASS | Operation identity
+PASS | Queue state machine
+PASS | Server idempotency table
+PASS | Reception idempotency hook
+PASS | Expediente idempotency hook
+PASS | GPS idempotency endpoint
+PASS | Photo idempotency multipart
+PASS | Offline assigned cache
+PASS | Startup loads assigned queue offline
+PASS | Server reachability separate from navigator.onLine
+PASS | Offline photos as Blob
+PASS | Offline GPS store
+PASS | Offline delete queue
+PASS | Offline session cache
+PASS | PWA manifest standalone
+PASS | Service Worker navigation fallback
+PASS | Service Worker API bypass
+PASS | HTTPS warning
+PASS | D01-D05 state machine retained
+PASS | Clean DB baseline | {'expedientes': 0, 'personal': 1, 'usuarios': 3, 'notificaciones': 0, 'asignaciones': 0}
+RESUMEN 27/27 PASS

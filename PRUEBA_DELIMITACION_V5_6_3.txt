@@ -1,0 +1,12 @@
+PRUEBA V5.6.3 — DELIMITACIÓN TÉCNICA Y COMPETENCIAL
+
+[PASS] Sección 8 presente en Informe Técnico.
+[PASS] Existen 5 controles checkbox interactivos.
+[PASS] Cada checkbox tiene valor independiente.
+[PASS] Se agregó observacion_delimitacion como textarea opcional.
+[PASS] collectDynamicRows() guarda delimitacion_tecnica y observacion_delimitacion.
+[PASS] restoreDelimitacion() restaura la selección y observación.
+[PASS] La validación del paso Informe no exige las casillas.
+[PASS] Sintaxis JavaScript del Sistema 1: PASS.
+
+Resultado: 8/8 PASS

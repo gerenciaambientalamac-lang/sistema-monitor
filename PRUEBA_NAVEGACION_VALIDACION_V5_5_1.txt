@@ -1,0 +1,16 @@
+PRUEBA DE NAVEGACION Y VALIDACION — V5.5.1
+
+Objetivo:
+Evitar que "Guardar y continuar" cambie de pagina cuando el guardado falla o faltan datos obligatorios.
+
+Controles estáticos realizados:
+1. Botón Expediente usa saveAndContinue('datos',...): PASS
+2. Botón Acta usa saveAndContinue('acta',...): PASS
+3. saveAndContinue espera await save() antes de show(): PASS
+4. Validación de campos obligatorios antes de guardar: PASS
+5. Si falta un campo, permanece en la sección actual y señala el primero: PASS
+6. Si el servidor rechaza el guardado, no navega a la siguiente sección: PASS
+7. Acta conserva botón "Regresar a Expediente para revisar": PASS
+8. Sintaxis JavaScript (node --check): PASS
+
+Resultado: 8/8 PASS

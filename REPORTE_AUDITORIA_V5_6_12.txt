@@ -1,0 +1,24 @@
+AUDITORIA V5.6.12 — REGISTRO DE DENUNCIA/SOLICITUD DESDE ACTA
+Fecha: 2026-09-09
+
+RESULTADO: 16/16 PASS
+
+1. PASS — Interfaz de Acta presenta pregunta: ¿La actuación ya fue registrada?
+2. PASS — Opción Sí permite cargar y seleccionar actuaciones accesibles al Técnico.
+3. PASS — Opción Sí vincula el Acta al expediente seleccionado.
+4. PASS — Opción No muestra formulario estructurado, sin prompts.
+5. PASS — Formulario nuevo exige origen, fecha, componente y distrito.
+6. PASS — Componente principal se registra desde la recepción y no se hereda de una actuación anterior.
+7. PASS — Se mantienen catálogo y validación server-side de componentes/distritos.
+8. PASS — API /api/recepcion-desde-acta está restringida al rol TECNICO.
+9. PASS — El código AMB-LLE-AAAA-NNNN se genera en servidor.
+10. PASS — La nueva recepción se registra en tabla recepciones e historial.
+11. PASS — Se genera alerta al Gerente y al Administrador.
+12. PASS — El estado inicial permanece RECIBIDO_PENDIENTE_ASIGNACION.
+13. PASS — El Técnico que registró en campo puede guardar el borrador del Acta sin convertirlo en asignación formal.
+14. PASS — El Técnico no puede finalizar/enviar el Informe mientras el caso siga pendiente de asignación del Gerente.
+15. PASS — El Gerente puede realizar posteriormente la asignación formal y el Técnico recupera el acceso normal a la actuación.
+16. PASS — server.py y JavaScript superan comprobación de sintaxis.
+
+PRUEBA DINÁMICA LIMPIA:
+Solicitud de inspección + TP + Zaragoza -> AMB-LLE-2026-0001 -> guardado como RECIBIDO_PENDIENTE_ASIGNACION -> alerta al Gerente -> asignación formal -> acceso técnico posterior: PASS.

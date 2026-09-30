@@ -1,0 +1,20 @@
+V5.6.14 — PRUEBA DE CORRECCION
+
+1. Campos Acta ubicación
+PASS - Cantón/caserío/colonia/urbanización editable.
+PASS - Lugar específico editable.
+PASS - Dirección/domicilio editable.
+PASS - Referencia del sitio editable.
+PASS - Datos de recepción conservados por separado de la ubicación verificada en campo.
+
+2. Migración al Informe
+PASS - El Informe prioriza acta_direccion_campo para el lugar/dirección verificado.
+
+3. Exportación Word/PDF
+PASS - inputs/selects/textarea/checkbox/radio se convierten a valores estáticos durante la exportación.
+PASS - El archivo Word no depende de controles HTML para mostrar los valores.
+PASS - La impresión/PDF utiliza la misma representación estática.
+PASS - La exportación no cambia estado ni valida/finaliza.
+
+4. Sintaxis
+PASS - JavaScript de Sistema 1.

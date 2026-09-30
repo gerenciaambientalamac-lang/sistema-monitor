@@ -1,0 +1,33 @@
+REPORTE DE AUDITORÍA V5.6.11 — ALERTAS INTERNAS
+Sistema de Gestión Ambiental y Gestión de Riesgo — La Libertad Este
+
+Resultado funcional: 11/11 PASS
+Resultado sintáctico JavaScript: 2/2 PASS
+Resultado Python server.py: PASS
+
+Pruebas funcionales:
+1. /api/health reporta V5.6.11 — PASS
+2. Recepción de actuación — PASS
+3. Alerta de nueva actuación para administrador — PASS
+4. Asignación a Técnico — PASS
+5. Alerta de actuación asignada al Técnico — PASS
+6. Finalización técnica y envío a revisión — PASS
+7. Alerta de informe recibido para Gerente — PASS
+8. Devolución del informe — PASS
+9. Alerta de devolución al Técnico — PASS
+10. Marcar alerta individual como leída — PASS
+11. Persistencia de estado leído — PASS
+
+Comprobaciones adicionales:
+- Las alertas se almacenan en la tabla notificaciones del mismo SQLite institucional.
+- Los eventos se generan en el servidor durante la transición correspondiente.
+- El destinatario técnico se resuelve por personal asociado y usuario activo.
+- Las acciones de alerta se relacionan con el expediente correspondiente.
+- El módulo técnico incluye botones de impresión/PDF y Word.
+- La generación documental no modifica el estado institucional.
+- JS Sistema 1 — PASS
+- JS Sistema 2 — PASS
+- server.py — PASS
+
+DICTAMEN:
+V5.6.11 aprobada para la siguiente etapa de prueba funcional en red local, manteniendo las pruebas de dos o más equipos como siguiente validación operativa.

@@ -1,0 +1,17 @@
+AUDITORIA V5.6.13 — ACTA WORD/PDF
+
+1. Botón Imprimir Acta / PDF presente: PASS
+2. Botón Acta en Word presente: PASS
+3. Función printActa() presente: PASS
+4. Función exportActaWord() presente: PASS
+5. Valores actuales de inputs/textarea/select serializados para exportación: PASS
+6. Checkboxes del Acta preservan su selección en la exportación: PASS
+7. Código de expediente y datos de Acta incluidos: PASS
+8. Generación documental no cambia el estado: PASS
+9. Flujo Guardar Acta y continuar preservado: PASS
+10. server.py sin cambios funcionales: PASS
+11. Sintaxis JavaScript embebido: PASS
+12. Sintaxis Python server.py: PASS
+
+RESULTADO: 12/12 PASS — auditoría estática/estructural.
+Nota: la impresión/PDF y descarga Word requieren prueba manual en navegador porque el entorno de auditoría no dispone de navegador Playwright operativo.

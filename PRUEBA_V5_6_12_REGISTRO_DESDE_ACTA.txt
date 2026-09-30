@@ -1,0 +1,12 @@
+V5.6.12 REGISTRO DESDE ACTA — PRUEBA ESTÁTICA
+PASS — Opción Sí/No implementada.
+PASS — Selección de expediente existente disponible para actuaciones accesibles al Técnico.
+PASS — Opción No captura datos mínimos en formulario, sin prompts.
+PASS — API /api/recepcion-desde-acta existente y restringida a TECNICO.
+PASS — Código de expediente generado en servidor.
+PASS — Recepción e historial registrados.
+PASS — Alerta al Gerente y Administrador.
+PASS — Estado inicial RECIBIDO_PENDIENTE_ASIGNACION.
+PASS — Guardado de Acta permitido al Técnico creador del registro.
+PASS — Finalización técnica bloqueada hasta asignación formal del Gerente.
+PASS — No se otorgan facultades de asignación al Técnico.

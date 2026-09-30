@@ -1,0 +1,25 @@
+AUDITORÍA D02 V5.6.26 — PERSONAL, ACTIVACIÓN Y ASIGNACIÓN
+Resultado: 22/22 PASS
+
+PASS | Python syntax
+PASS | 01_SISTEMA_INSPECCIONES JavaScript syntax
+PASS | 02_MOTOR_SEGUIMIENTO JavaScript syntax
+PASS | Gerente is sole personnel manager
+PASS | Case-insensitive duplicate protection
+PASS | Name whitespace normalization
+PASS | Unknown personnel ID rejected
+PASS | Personnel UI restricted to Gerente
+PASS | Clean DB has no test expedients
+PASS | Clean DB has baseline personnel only
+PASS | Health V5.6.26 | {'ok': True, 'version': 'V5.6.26', 'database': 'SQLite', 'auth': 'enabled'}
+PASS | Gerente login | {'ok': True, 'username': 'gerente', 'rol': 'GERENTE', 'debe_cambiar': False}
+PASS | Add personnel by Gerente | {'ok': True}
+PASS | Case-insensitive duplicate rejected | {'ok': False, 'error': 'El técnico ya está registrado en el personal institucional.'}
+PASS | Blank name rejected | {'ok': False, 'error': 'El nombre del técnico es obligatorio.'}
+PASS | Deactivate personnel | {'ok': True}
+PASS | Create reception for assignment test | {'ok': True, 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Inactive technician cannot be assigned | {'ok': False, 'error': 'El técnico seleccionado no está activo y no puede recibir nuevas actuaciones.'}
+PASS | Reactivate personnel | {'ok': True}
+PASS | Active technician can be assigned | {'ok': True, 'expediente': {'codigo': 'AMB-LLE-2026-0001', 'anio': 2026, 'status': 'ASIGNADO_A_INSPECCION', 'tipo': 'OI', 'materia_principal': 'OI', 'materias_adicionales': [], 'materias': ['OI'], 'origen': 'Denuncia ambiental', 'fecha_recepcion': '2026-09-25', 'distrito': 'Zaragoza', 'tipo_actuacion': 'Inspección', 'modalidad_inspeccion': 'INDIVIDUAL', 'referencia_externa': '', 'institucion_solicitante': '', 'solicitante': 'D02', 'condicion': '', 'contacto_solicitante': '', 'descripcion_inicial': 'Prueba', 'prioridad': 'Media', 'recepcion': {'recibido_por': 'gerente', 'recibido_at': '2026-09-25T21:06:08'}, 'codigo_acta': 'ACTA-OI-2026-0001', 'codigo_informe': 'INF-OI-2026-0001', 'tecnico_responsable': 'Técnico D02 Uno', 'tecnico_asignado': 'Técnico D02 Uno', 'asignacion': {'tecnico': 'Técnico D02 Uno', 'gerente': 'gerente', 'fecha': '2026-09-25T21:06:10', 'observacion': ''}}}
+PASS | Deactivate after historical assignment | {'ok': True}
+PASS | Historical personnel remains in catalog | [{'id': 1, 'nombre': 'Técnico Ambiental Distrital de Prueba', 'cargo': 'Técnico Ambiental Distrital', 'activo': 1}, {'id': 2, 'nombre': 'Técnico D02 Uno', 'cargo': 'Técnico Ambiental Distrital', 'activo': 0}]

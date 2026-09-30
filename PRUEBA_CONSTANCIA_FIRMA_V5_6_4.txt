@@ -1,0 +1,12 @@
+PRUEBA V5.6.4 — CONSTANCIA SOBRE LA FIRMA Y CIERRE
+
+1. Casilla «Persona relacionada no presente»: PASS
+2. Casilla «Se negó a firmar»: PASS
+3. Campo «Motivo / constancia adicional (opcional)»: PASS
+4. Casillas interactivas con la misma clase visual de verificaciones: PASS
+5. Persistencia en state.constancia_firma_situaciones: PASS
+6. Persistencia del texto en state.constancia_firma: PASS
+7. Restauración después de cargar expediente desde servidor: PASS
+8. Ninguna opción es obligatoria para guardar el Acta: PASS
+9. JavaScript inline: PASS
+RESULTADO: 9/9 PASS

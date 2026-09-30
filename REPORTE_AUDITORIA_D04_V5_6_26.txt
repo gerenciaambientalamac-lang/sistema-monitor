@@ -1,0 +1,35 @@
+AUDITORÍA D04 V5.6.26 — INTEGRIDAD DEL ACTA MAESTRO Y DEVOLUCIÓN
+Resultado: 32/32 PASS
+
+PASS | Python syntax
+PASS | 01_SISTEMA_INSPECCIONES JavaScript syntax
+PASS | 02_MOTOR_SEGUIMIENTO JavaScript syntax
+PASS | D01 catalog validation retained
+PASS | D02 personnel manager-only retained
+PASS | D03 historical participant rule retained
+PASS | Reception action/modality server catalogs retained
+PASS | Technical source action immutable
+PASS | Technical source modality immutable
+PASS | Correction scope has server whitelist
+PASS | Acta action field remains reception-controlled UI
+PASS | Dashboard scope catalog present
+PASS | Health V5.6.26 | {'ok': True, 'version': 'V5.6.26', 'database': 'SQLite', 'auth': 'enabled'}
+PASS | Gerente login
+PASS | Técnico login
+PASS | Gerente initial password change
+PASS | Técnico initial password change
+PASS | Reception stores non-default action/modality
+PASS | Reception values persisted
+PASS | Gerente assigns case
+PASS | Technical save with source values | {'ok': True, 'id': 1, 'version': 3, 'status': 'BORRADOR', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Mutation rejected: action | {'ok': False, 'error': 'El tipo de actuación no coincide con el registrado en la recepción: Verificación.'}
+PASS | Mutation rejected: modality | {'ok': False, 'error': 'La modalidad de inspección no coincide con la registrada en la recepción: CONJUNTA_TAD.'}
+PASS | Mutation rejected: action+modality | {'ok': False, 'error': 'El tipo de actuación no coincide con el registrado en la recepción: Verificación.'}
+PASS | Technical finalization reaches review state
+PASS | Invalid correction scope rejected | {'ok': False, 'error': 'El alcance de corrección contiene campos no autorizados: NO_AUTORIZADO'}
+PASS | Gerente can return with valid correction scope
+PASS | Correction scope persisted normalized
+PASS | Authorized correction accepted | {'ok': True, 'id': 1, 'version': 6, 'status': 'DEVUELTO', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Unauthorized correction field rejected | {'ok': False, 'error': 'La devolución limita la edición. Campos no autorizados: analisis'}
+PASS | Corrected case can be finalized | {'ok': True, 'id': 1, 'version': 7, 'status': 'INFORME_FINALIZADO_PENDIENTE_VB', 'codigo': 'AMB-LLE-2026-0001'}
+PASS | Gerente can validate corrected report | {'ok': True, 'expediente': {'codigo': 'AMB-LLE-2026-0001', 'tipo': 'TP', 'origen': 'Solicitud de inspección', 'distrito': 'Zaragoza', 'tipo_actuacion': 'Verificación', 'modalidad_inspeccion': 'CONJUNTA_TAD', 'tecnico_responsable': 'Técnico Ambiental Distrital de Prueba', 'acta_objeto': 'Objeto corregido D04', 'facts': [{'hecho': 'Hecho D04'}], 'analisis': 'Análisis D04', 'conclusions': [{'text': 'Conclusión D04'}], 'recommendations': [{'text': 'Recomendación D04'}], 'acta_tipo_actuacion': 'Verificación', 'materia_principal': 'TP', 'materias_adicionales': [], 'materias': ['TP'], 'acta_schema_version': 'V5.5.1-MAESTRO-1', 'codigo_acta': 'ACTA-TP-2026-0001', 'codigo_informe': 'INF-TP-2026-0001', 'tecnicos_participantes': [], 'history': [{'action': 'DEVUELTO CON OBSERVACIONES', 'date': '2026-09-25T21:49:02', 'user': 'gerente', 'obs': 'Corregir objeto', 'documento': '', 'seccion': '', 'correccion_requerida': 'Corregir objeto', 'scope': ['acta_objeto']}, {'action': 'VALIDACIÓN INSTITUCIONAL APROBADA', 'date': '2026-09-25T21:49:04', 'user': 'gerente', 'obs': 'Validación D04'}], 'photos': [], 'gps_points': [], 'status': 'VB_APROBADO'}}

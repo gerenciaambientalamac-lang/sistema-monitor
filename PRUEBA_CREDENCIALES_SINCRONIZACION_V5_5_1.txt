@@ -1,0 +1,28 @@
+PRUEBA EXPLICITA DE CREDENCIALES Y SINCRONIZACION — V5.5.1
+============================================================
+Fecha: 2026-09-08
+Entorno: copia aislada de desarrollo, SQLite nueva y prueba adicional con SQLite reutilizada.
+
+1. CREDENCIALES PUBLICADAS
+- tecnico / LLE-Tecnico-2026! -> TECNICO
+- gerente / LLE-Gerente-2026! -> GERENTE
+- admin / LLE-Admin-2026! -> ADMIN
+
+2. PRUEBA SOBRE BASE NUEVA
+- tecnico: HTTP 200, rol TECNICO, debe_cambiar=false — PASS
+- gerente: HTTP 200, rol GERENTE, debe_cambiar=false — PASS
+- admin: HTTP 200, rol ADMIN, debe_cambiar=false — PASS
+
+3. PRUEBA DE SINCRONIZACION SOBRE BASE REUTILIZADA
+Se alteraron deliberadamente los hashes almacenados de las tres cuentas y se establecio debe_cambiar=1 para simular una base procedente de pruebas anteriores.
+
+Resultado después de iniciar nuevamente el servidor:
+- tecnico con contraseña publicada: HTTP 200, rol TECNICO, debe_cambiar=false — PASS
+- gerente con contraseña publicada: HTTP 200, rol GERENTE, debe_cambiar=false — PASS
+- admin con contraseña publicada: HTTP 200, rol ADMIN, debe_cambiar=false — PASS
+
+4. DICTAMEN
+APROBADA — Las tres credenciales provisionales son aceptadas y la sincronización funciona sobre una base reutilizada.
+
+5. ALCANCE
+Este mecanismo se mantiene únicamente para desarrollo/pruebas. No debe considerarse el mecanismo definitivo de administración de usuarios para producción.

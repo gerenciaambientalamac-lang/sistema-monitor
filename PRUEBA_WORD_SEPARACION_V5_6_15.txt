@@ -1,0 +1,13 @@
+PRUEBA WORD/PDF — V5.6.15
+
+1. Script embebido sintácticamente válido: PASS
+2. Exportación del Acta localizada: PASS
+3. Cada control se convierte en bloque independiente etiqueta/valor: PASS
+4. Campos consecutivos ya no se exportan como controles inline concatenados: PASS
+5. textarea conserva saltos de línea: PASS
+6. select conserva texto seleccionado: PASS
+7. checkbox/radio conserva ☑/☐: PASS
+8. Nombre de archivo Word conserva código: PASS
+9. Impresión/PDF usa la misma salida estática: PASS
+10. Exportación no altera estado/validación: PASS
+RESULTADO: 10/10 PASS

@@ -1,0 +1,39 @@
+PRUEBA DE FLUJO OPERATIVO DEFINITIVO V5.6.2
+
+RESULTADO: PASS
+
+INTERFAZ
+1. Sistema 1 muestra la recepción/denuncia como antecedente de consulta, no como formulario técnico editable: PASS
+2. Sistema 1 inicia la captura técnica en Acta de Inspección: PASS
+3. Sistema 1 continúa al Informe Técnico: PASS
+4. Sistema 1 continúa a Evidencias como paso separado: PASS
+5. La finalización/envío a revisión solo está en el paso Evidencias: PASS
+6. Sistema 2 presenta Recepción y Asignación al inicio: PASS
+7. Sistema 2 presenta Revisión/Validación antes de Remisión/Continuación: PASS
+8. Expediente/Consulta integral se presenta como consulta final del ciclo: PASS
+9. Dashboard muestra la trazabilidad completa del caso: PASS
+
+VALIDACIÓN DE CÓDIGO
+10. JavaScript Sistema 1: PASS
+11. JavaScript Sistema 2: PASS
+12. Python server.py: PASS
+
+FLUJO API INTEGRAL
+13. Recepción genera código: PASS
+14. Asignación por Gerente a técnico activo: PASS
+15. Técnico inicia solo después de asignación: PASS
+16. Guardado técnico mantiene BORRADOR: PASS
+17. Finalización técnica produce INFORME_FINALIZADO_PENDIENTE_VB: PASS
+18. Gerente valida: PASS
+19. Remisión exige validación previa: PASS
+20. Remisión produce REMITIDO y conserva historial: PASS
+
+ORDEN DEFINITIVO
+DENUNCIA / SOLICITUD
+→ ASIGNACIÓN POR EL GERENTE
+→ ACTA DE INSPECCIÓN
+→ INFORME TÉCNICO
+→ EVIDENCIAS
+→ REVISIÓN / VALIDACIÓN
+→ REMISIÓN / CONTINUACIÓN
+→ EXPEDIENTE / CONSULTA INTEGRAL

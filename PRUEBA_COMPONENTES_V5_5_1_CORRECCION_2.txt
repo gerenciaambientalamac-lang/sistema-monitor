@@ -1,0 +1,10 @@
+PRUEBA DE ESTRUCTURA DE COMPONENTES V5.5.1 — CORRECCIÓN 2
+
+PASS — Sin término Materia ambiental en interfaz
+PASS — DA no aparece como componente
+PASS — MT aparece como componente
+PASS — Acta reutiliza componente principal
+PASS — Acta muestra adicionales sin edición duplicada
+PASS — Servidor rechaza DA como componente
+
+Criterio: el origen de la actuación es independiente del componente ambiental. El Acta reutiliza los componentes capturados en Expediente y no crea una segunda captura.

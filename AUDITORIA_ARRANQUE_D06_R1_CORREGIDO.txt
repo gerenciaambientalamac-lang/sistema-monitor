@@ -1,0 +1,17 @@
+AUDITORIA DE ARRANQUE D06-R1 CORREGIDO
+=======================================
+
+PASS 1 - El paquete ya no depende de una subcarpeta v526_D05_PC_MOVIL_FINAL para encontrar los lanzadores.
+PASS 2 - Existe un unico lanzador recomendado para la prueba LAN/offline: INICIAR_D06_R1_LAN_HTTPS.bat.
+PASS 3 - Se retiraron lanzadores V5.6.25/V5.6.26 antiguos de esta distribucion para evitar ejecutar versiones equivocadas.
+PASS 4 - El lanzador LAN usa Python 3.x detectado por py/where/rutas comunes.
+PASS 5 - LLE_BIND=0.0.0.0, LLE_PORT=8001 y LLE_HTTPS=1.
+PASS 6 - Genera certificado D06 si falta.
+PASS 7 - Muestra la IPv4 LAN al usuario.
+PASS 8 - Abre automaticamente la URL HTTPS LAN.
+PASS 9 - Los BAT de Tecnico/Gerente no contienen IP institucional fija; detectan la IPv4 LAN.
+PASS 10 - Existe arranque LOCAL separado para PC.
+PASS 11 - server.py conserva APP_VERSION V5.6.26.
+PASS 12 - Se conserva el Core/D01-D05; esta correccion solo reestructura el arranque/distribucion.
+
+NO SE DECLARA APROBADA LA PRUEBA FISICA OFFLINE. Esta version queda lista para ejecutarla en PC y luego validar el telefono real.

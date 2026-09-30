@@ -1,0 +1,51 @@
+AUDITORÍA ESPECIAL DE ARRANQUE V5.5.1
+=======================================================
+Fecha/hora: 2026-09-08 19:52:35
+URL: http://127.0.0.1:8001
+
+PASS: 41
+FAIL: 0
+
+[PASS] Núcleo: servidor V5.5.1 declarado | Busca identificación V5.5.1
+[PASS] Núcleo: credenciales de prueba sincronizadas | Las tres cuentas provisionales se sincronizan en desarrollo
+[PASS] Núcleo: recuperación de expediente desde servidor | SQLite es la fuente de recuperación para expedientes existentes
+[PASS] Núcleo: relación de evidencia con hecho validada | Evita referencias a hechos inexistentes
+[PASS] Núcleo: archivos fotográficos eliminados con borrador | Evita archivos huérfanos al eliminar borradores
+[PASS] Núcleo: status del cliente eliminado | El servidor elimina status recibido
+[PASS] Núcleo: actor del cliente eliminado | El servidor elimina actor recibido
+[PASS] Núcleo: estado se asigna después de hidratar | Sincronización final
+[PASS] Núcleo: columna y payload se guardan juntos | Persistencia sincronizada
+[PASS] Núcleo: responsable activo validado | Bloqueo de técnico responsable inactivo
+[PASS] Núcleo: participante activo validado | Bloqueo de participante inactivo
+[PASS] Núcleo: visibilidad por rol | Técnico filtrado por responsable
+[PASS] Núcleo: revisión solo Gerente/Admin | Control de revisión
+[PASS] Núcleo: remisión exige VB_APROBADO | Control de transición de remisión
+[PASS] Motores: ruta Sistema 1 permitida | Recurso estático
+[PASS] Motores: ruta Sistema 2 permitida | Recurso estático
+[PASS] Motores: API de expediente presente | Motor de inspecciones
+[PASS] Motores: API de revisión presente | Motor de seguimiento
+[PASS] Motores: API de remisión presente | Motor de seguimiento
+[PASS] Seguridad: recursos sensibles bloqueados | Lista blanca estática
+[PASS] Seguridad: bind local predeterminado | 127.0.0.1 por defecto
+[PASS] Arranque: /api/health responde | {"ok": true, "version": "V5.5.1", "database": "SQLite", "auth": "enabled"}
+[PASS] Arranque: versión reportada V5.5.1 | {"ok": true, "version": "V5.5.1", "database": "SQLite", "auth": "enabled"}
+[PASS] Seguridad: /api/expedientes sin sesión = 401 | HTTP 401
+[PASS] Seguridad: /api/personal sin sesión = 401 | HTTP 401
+[PASS] Seguridad: /server.py bloqueado | HTTP 404
+[PASS] Seguridad: /sistema_gestion_ambiental.sqlite3 bloqueado | HTTP 404
+[PASS] Seguridad: /data.json bloqueado | HTTP 404
+[PASS] Seguridad: /__pycache__/server.cpython-311.pyc bloqueado | HTTP 404
+[PASS] Motor: /01_SISTEMA_INSPECCIONES/ accesible | HTTP 200
+[PASS] Motor: /02_MOTOR_SEGUIMIENTO/ accesible | HTTP 200
+[PASS] Seguridad: CORS no habilitado | HTTP 405; ACAO=None
+[PASS] Autenticación explícita: tecnico | HTTP 200; respuesta={'ok': True, 'username': 'tecnico', 'rol': 'TECNICO', 'debe_cambiar': False}
+[PASS] Autenticación explícita: gerente | HTTP 200; respuesta={'ok': True, 'username': 'gerente', 'rol': 'GERENTE', 'debe_cambiar': False}
+[PASS] Autenticación explícita: admin | HTTP 200; respuesta={'ok': True, 'username': 'admin', 'rol': 'ADMIN', 'debe_cambiar': False}
+[PASS] BD: PRAGMA integrity_check = OK | ok
+[PASS] BD: PRAGMA foreign_key_check = 0 | 0 errores
+[PASS] BD: tablas núcleo presentes | documentos, evidencias, expedientes, fotografias, historial, participantes_inspeccion, personal, puntos_gps, sesiones, sqlite_sequence, usuarios, versiones
+[PASS] BD: códigos de expediente únicos | 0 duplicados
+[PASS] BD: status = payload_json.status | 0 inconsistencias
+[PASS] BD: no hay participantes inactivos en borradores | 0 encontrados
+
+DICTAMEN: APROBADA

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Runtime database / local data
+sistema_gestion_ambiental.sqlite3
+sistema_gestion_ambiental.sqlite3-*
+storage/fotografias/*
+!storage/fotografias/.gitkeep
+
+# Local HTTPS certificate material — never commit private keys
+/tls/
+*.pem
+
+# Local logs / temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Desktop.ini
