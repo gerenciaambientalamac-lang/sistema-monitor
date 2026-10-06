@@ -1,0 +1,22 @@
+name: Crear ZIP prueba funcional R1
+
+on:
+  push:
+    paths:
+      - 'prueba-funcional-r1/**'
+      - '.github/workflows/crear-zip-prueba-r1.yml'
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Empaquetar prueba
+        run: |
+          cd prueba-funcional-r1
+          zip -r ../LLE_SISTEMA_PRUEBA_FUNCIONAL_REAL_R1.zip .
+      - name: Publicar ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: LLE_SISTEMA_PRUEBA_FUNCIONAL_REAL_R1
+          path: LLE_SISTEMA_PRUEBA_FUNCIONAL_REAL_R1.zip
